@@ -1,6 +1,5 @@
 /*
 Copyright © 2025 NAME HERE <EMAIL ADDRESS>
-
 */
 package cmd
 
@@ -10,18 +9,26 @@ import (
 	"github.com/spf13/cobra"
 )
 
-
-
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "h2go",
-	Short: "A brief description of your application",
-	Long: `A longer description that spans multiple lines and likely contains
-examples and usage of using your application. For example:
+	Short: "HTMX golang component library",
+	Long: `h2go is a CLI tool for scaffolding Go + HTMX UI components, inspired by shadcn/ui.  
+Quickly add prebuilt, TailwindCSS-styled components to your Go applications.
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+Usage:
+  h2go [command]
+
+Available Commands:
+  init        Initialize your project with TailwindCSS config and component directories
+  add         Add a UI component to your project (button, modal, form, etc.)
+  list        List available UI components you can add
+  update      Update your components to the latest version
+  help        Help about any command
+
+Flags:
+  -h, --help      help for h2go
+  -v, --version   version for h2go`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },
@@ -47,5 +54,3 @@ func init() {
 	// when this action is called directly.
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
-
-
